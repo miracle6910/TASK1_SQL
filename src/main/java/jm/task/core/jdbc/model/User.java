@@ -10,8 +10,6 @@ public class User {
     private String lastName;
     private byte age;
 
-    // Конструкторы, геттеры и сеттеры
-
     public User(String name, String lastName, byte age) {
         this.name = name;
         this.lastName = lastName;
@@ -40,11 +38,11 @@ public class User {
 
     @Override
     public String toString() {
-        return "User{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", age=" + age +
+        return "Пользователь{" +
+                "Номер=" + id +
+                ", Имя='" + name + '\'' +
+                ", Фамилия='" + lastName + '\'' +
+                ", Возраст=" + age +
                 '}';
     }
 }

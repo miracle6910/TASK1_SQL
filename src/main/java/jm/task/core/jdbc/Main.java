@@ -13,16 +13,14 @@ public class Main {
     public static void main(String[] args) {
         UserService userService = new UserServiceImpl();
 
-
-        userService.dropUsersTable();
         userService.createUsersTable();
         System.out.println("Таблица Users создана.");
 
 
-        userService.saveUser("User1", "Ivanov1", (byte) 25);
-        userService.saveUser("User2", "Ivanov2", (byte) 30);
-        userService.saveUser("User3", "Ivanov3", (byte) 28);
-        userService.saveUser("User4", "Ivanov4", (byte) 28);
+        userService.saveUser("Иван", "Иванов", (byte) 25);
+        userService.saveUser("Эльван", "Эльванов", (byte) 30);
+        userService.saveUser("Хайван", "Хайванов", (byte) 28);
+        userService.saveUser("Байван", "Байванов", (byte) 28);
         System.out.println("Users добавлены.");
 
 

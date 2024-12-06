@@ -2,9 +2,16 @@ package jm.task.core.jdbc.util;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.net.spi.InetAddressResolverProvider;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.util.Properties;
+
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
+import java.io.InputStream;
 import java.util.Properties;
 
 
@@ -20,8 +27,31 @@ public class Util {
     private static String username;
     private static String password;
 
+
+
+    private static SessionFactory sessionFactory;
+
     static {
         loadPropertyConnection();
+        loadSessionFactory();
+    }
+
+    private static void loadSessionFactory() {
+        try {
+            Configuration configuration = new Configuration();
+            configuration.setProperty("hibernate.connection.url", url);
+            configuration.setProperty("hibernate.connection.username", username);
+            configuration.setProperty("hibernate.connection.password", password);
+            configuration.setProperty("hibernate.dialect", "org.hibernate.dialect.SQLServerDialect");
+            configuration.setProperty("hibernate.hbm2ddl.auto", "update");
+            sessionFactory = configuration.buildSessionFactory();
+        } catch (Throwable e) {
+            System.err.println("Создание SessionFactory не удалось " + e.getMessage());
+            throw new ExceptionInInitializerError(e);
+        }
+    }
+    public static SessionFactory getSessionFactory() {
+        return sessionFactory;
     }
 
     private static void loadPropertyConnection() {
@@ -39,7 +69,6 @@ public class Util {
             System.err.println("Ошибка чтения файла конфигурации БД: " + e.getMessage());
         }
     }
-
     public static Connection getConnection() {
         Connection connection = null;
         try {
@@ -52,6 +81,7 @@ public class Util {
         }
         return connection;
     }
+
 }
 
 
