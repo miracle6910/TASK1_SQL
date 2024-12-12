@@ -1,0 +1,17 @@
+
+volumes:
+  postgres_db_docker:
+
+services:
+  docker_db:
+    image: postgres
+    restart: always
+    environment:
+      - POSTGRES_USER=miracle
+      - POSTGRES_PASSWORD=55546123qwerty
+      - POSTGRES_DB=excelparser
+    volumes:
+      - docker_db:/var/lib/postgresql/data
+    ports:
+      - "127.0.0.1:5438:5432"
+

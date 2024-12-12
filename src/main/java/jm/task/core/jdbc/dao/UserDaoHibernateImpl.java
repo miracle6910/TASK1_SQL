@@ -44,9 +44,9 @@ public class UserDaoHibernateImpl implements UserDao {
     @Override
     public void saveUser(String name, String lastName, byte age) {
         Transaction transaction = null;
+        User user = new User();
         try (Session session = Util.getSession()) {
             transaction = session.beginTransaction();
-            User user = new User();
             user.setName(name);
             user.setLastName(lastName);
             user.setAge(age);
@@ -65,6 +65,7 @@ public class UserDaoHibernateImpl implements UserDao {
     @Override
     public void removeUserById(long id) {
         Transaction transaction = null;
+
         try (Session session = Util.getSession()) {
             transaction = session.beginTransaction();
             User user = session.get(User.class, id);
