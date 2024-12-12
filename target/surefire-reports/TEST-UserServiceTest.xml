@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="6" failures="0" name="UserServiceTest" time="1.385" errors="0" skipped="0">
+<testsuite tests="6" failures="0" name="UserServiceTest" time="1.364" errors="0" skipped="0">
   <properties>
     <property name="idea.version" value="2023.1.7"/>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
@@ -31,7 +31,7 @@
     <property name="classworlds.conf" value="C:\Program Files\JetBrains\IntelliJ IDEA 2023.1.3\plugins\maven\lib\maven3\bin\m2.conf"/>
     <property name="sun.jnu.encoding" value="Cp1251"/>
     <property name="stdout.encoding" value="UTF-8"/>
-    <property name="java.library.path" value="C:\Users\stepan-pc\.jdks\openjdk-23.0.1\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\;C:\Program Files\Microsoft SQL Server\140\Tools\Binn\;C:\Program Files\Microsoft SQL Server\140\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\150\DTS\Binn\;C:\Program Files\dotnet\;C:\Program Files (x86)\dotnet\;C:\Program Files (x86)\NAiS MEWNET;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\OMRON\Communications Middleware\assembly\;C:\Program Files\PuTTY\;C:\Program Files\NVIDIA Corporation\NVIDIA app\NvDLISR;C:\Program Files\Git\cmd;C:\Users\stepan-pc\AppData\Local\Microsoft\WindowsApps;;."/>
+    <property name="java.library.path" value="C:\Users\stepan-pc\.jdks\openjdk-23.0.1\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\;C:\Program Files\Microsoft SQL Server\140\Tools\Binn\;C:\Program Files\Microsoft SQL Server\140\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\150\DTS\Binn\;C:\Program Files\dotnet\;C:\Program Files (x86)\dotnet\;C:\Program Files (x86)\NAiS MEWNET;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\OMRON\Communications Middleware\assembly\;C:\Program Files\PuTTY\;C:\Program Files\NVIDIA Corporation\NVIDIA app\NvDLISR;C:\Program Files\Git\cmd;C:\Program Files\Docker\Docker\resources\bin;C:\Users\stepan-pc\AppData\Local\Microsoft\WindowsApps;;."/>
     <property name="jansi.passthrough" value="true"/>
     <property name="maven.conf" value="C:\Program Files\JetBrains\IntelliJ IDEA 2023.1.3\plugins\maven\lib\maven3/conf"/>
     <property name="jdk.debug" value="release"/>
@@ -47,7 +47,7 @@
     <property name="java.class.path" value="C:\Program Files\JetBrains\IntelliJ IDEA 2023.1.3\plugins\maven\lib\maven3\boot\plexus-classworlds-2.6.0.jar;C:\Program Files\JetBrains\IntelliJ IDEA 2023.1.3\plugins\maven\lib\maven3\boot\plexus-classworlds.license"/>
     <property name="java.vm.specification.version" value="23"/>
     <property name="sun.arch.data.model" value="64"/>
-    <property name="sun.java.command" value="org.codehaus.classworlds.Launcher -Didea.version=2023.1.7 install"/>
+    <property name="sun.java.command" value="org.codehaus.classworlds.Launcher -Didea.version=2023.1.7 verify"/>
     <property name="java.home" value="C:\Users\stepan-pc\.jdks\openjdk-23.0.1"/>
     <property name="user.language" value="ru"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
@@ -65,10 +65,10 @@
     <property name="sun.stdout.encoding" value="UTF-8"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="UserServiceTest" name="saveUser" time="1.308"/>
-  <testcase classname="UserServiceTest" name="removeUserById" time="0.024"/>
-  <testcase classname="UserServiceTest" name="getAllUsers" time="0.017"/>
-  <testcase classname="UserServiceTest" name="dropUsersTable" time="0.007"/>
-  <testcase classname="UserServiceTest" name="createUsersTable" time="0.008"/>
-  <testcase classname="UserServiceTest" name="cleanUsersTable" time="0.021"/>
+  <testcase classname="UserServiceTest" name="saveUser" time="1.294"/>
+  <testcase classname="UserServiceTest" name="removeUserById" time="0.023"/>
+  <testcase classname="UserServiceTest" name="getAllUsers" time="0.014"/>
+  <testcase classname="UserServiceTest" name="dropUsersTable" time="0.006"/>
+  <testcase classname="UserServiceTest" name="createUsersTable" time="0.009"/>
+  <testcase classname="UserServiceTest" name="cleanUsersTable" time="0.018"/>
 </testsuite>
