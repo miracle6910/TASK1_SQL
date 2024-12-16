@@ -1,17 +1,13 @@
-
-volumes:
-  postgres_db_docker:
+version: '3'
 
 services:
-  docker_db:
-    image: postgres
-    restart: always
-    environment:
-      - POSTGRES_USER=miracle
-      - POSTGRES_PASSWORD=55546123qwerty
-      - POSTGRES_DB=excelparser
-    volumes:
-      - docker_db:/var/lib/postgresql/data
+  postgres:
+    image: 'postgres:13'
+    container_name: 'java-postgres'
     ports:
-      - "127.0.0.1:5438:5432"
-
+      - 5432:5432
+    environment:
+      - 'POSTGRES_USER=sa'
+      - 'POSTGRES_PASSWORD=55546123qwerty'
+      - 'POSTGRES_HOST_AUTH_METHOD=trust'
+      - 'POSTGRES_DB=java'

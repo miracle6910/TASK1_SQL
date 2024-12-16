@@ -5,13 +5,12 @@
 <hibernate-configuration>
     <session-factory>
 
-        <property name="hibernate.connection.driver_class">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>
-        <property name="hibernate.connection.url">jdbc:sqlserver://localhost:55776;database=excelParser;encrypt=true;trustServerCertificate=true</property>
-        <property name="hibernate.connection.username">miracle</property>
+        <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+        <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/java-postgres</property>
+        <property name="hibernate.connection.username">sa</property>
         <property name="hibernate.connection.password">55546123qwerty</property>
 
-
-        <property name="hibernate.dialect">org.hibernate.dialect.SQLServerDialect</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
 
 
         <property name="hibernate.show_sql">true</property>

@@ -10,19 +10,9 @@ import java.util.Properties;
 
 public class Util {
 
-    private static final String url = "jdbc:sqlserver://localhost:55776;databaseName=excelParser;encrypt=true;trustServerCertificate=true;";
-    private static final String user = "miracle";
+    private static final String url = "jdbc:postgresql://localhost:5432/java";
+    private static final String user = "sa";
     private static final String password = "55546123qwerty";
-
-    static {
-        try {
-
-            Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-            throw new RuntimeException("Не удалось загрузить драйвер JDBC", e);
-        }
-    }
 
     private static SessionFactory sessionFactory = initSessionFactory();
 

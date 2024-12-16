@@ -13,8 +13,11 @@ public class UserDaoHibernateImpl implements UserDao {
         try (Session session = Util.getSession()) {
             transaction = session.beginTransaction();
 
-            String sql = "IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Users]') AND type in (N'U')) " +
-                    "CREATE TABLE Users (id INT IDENTITY(1,1) PRIMARY KEY, name NVARCHAR(30), lastName NVARCHAR(30), age TINYINT)";
+            String sql = "CREATE TABLE IF NOT EXISTS Users (" +
+                    "id SERIAL PRIMARY KEY, " +
+                    "name VARCHAR(30), " +
+                    "lastName VARCHAR(30), " +
+                    "age SMALLINT)";
 
             session.createNativeQuery(sql).executeUpdate();
 

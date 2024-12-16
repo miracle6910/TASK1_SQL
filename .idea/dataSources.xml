@@ -1,13 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="excelParser@localhost" uuid="3cffabfe-f551-4df7-b774-6f1ee3521234">
-      <driver-ref>sqlserver.ms</driver-ref>
-      <synchronize>true</synchronize>
-      <jdbc-driver>com.microsoft.sqlserver.jdbc.SQLServerDriver</jdbc-driver>
-      <jdbc-url>jdbc:sqlserver://localhost:55776;database=excelParser</jdbc-url>
-      <working-dir>$ProjectFileDir$</working-dir>
-    </data-source>
     <data-source source="LOCAL" name="excelparser@0.0.0.0" uuid="c093cad3-7998-4c59-906e-7c2d68b3b080">
       <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
@@ -15,15 +8,11 @@
       <jdbc-url>jdbc:postgresql://localhost:5438/postgres</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
-    <data-source source="LOCAL" name="hibernate.cfg.xml/Hibernate" uuid="f01c9cc3-6c23-4280-bae8-05cd12ee0848">
-      <driver-ref>sqlserver.ms</driver-ref>
+    <data-source source="LOCAL" name="postgres@0.0.0.0" uuid="0de479d6-546c-44cd-9aee-17221cb37f02">
+      <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
-      <imported>true</imported>
-      <remarks>Hibernate
-
-F:/java/PP_1_1_3-4_JDBC_Hibernate/src/main/resources/hibernate.cfg.xml</remarks>
-      <jdbc-driver>com.microsoft.sqlserver.jdbc.SQLServerDriver</jdbc-driver>
-      <jdbc-url>jdbc:sqlserver://localhost:55776;database=excelParser;encrypt=true;trustServerCertificate=true</jdbc-url>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://0.0.0.0:5432/postgres</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
   </component>
