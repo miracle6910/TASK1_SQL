@@ -9,40 +9,89 @@ import java.util.Properties;
 
 
 public class Util {
+    private static final SessionFactory sessionFactory = buildSessionFactory();
 
-    private static final String url = "jdbc:postgresql://localhost:5432/java";
-    private static final String user = "sa";
-    private static final String password = "55546123qwerty";
-
-    private static SessionFactory sessionFactory = initSessionFactory();
-
-    private static SessionFactory initSessionFactory() {
+    private static SessionFactory buildSessionFactory() {
         try {
-            Properties properties = new Properties();
-            properties.setProperty("hibernate.connection.url", url);
-            properties.setProperty("hibernate.connection.username", user);
-            properties.setProperty("hibernate.connection.password", password);
-            properties.setProperty("hibernate.dialect", "org.hibernate.dialect.SQLServerDialect");
-            properties.setProperty("hibernate.hbm2ddl.auto", "create");
+            // Создание конфигурации Hibernate
+            Configuration configuration = new Configuration();
+            configuration.configure(); // Загружает hibernate.cfg.xml
 
-            return new Configuration()
-                    .addProperties(properties)
-                    .addAnnotatedClass(User.class)
-                    .buildSessionFactory();
-        } catch (Exception e) {
-            e.printStackTrace();
-            throw new ExceptionInInitializerError("Initial SessionFactory creation failed." + e);
+            // Создание SessionFactory из конфигурации
+            return configuration.buildSessionFactory();
+        } catch (Throwable ex) {
+            // Обработка ошибок при создании SessionFactory
+            System.err.println("Initial SessionFactory creation failed." + ex);
+            throw new ExceptionInInitializerError(ex);
         }
     }
-    public static Session getSession() throws HibernateException {
-        return sessionFactory.openSession();
+
+    public static SessionFactory getSessionFactory() {
+        return sessionFactory;
     }
-    public static void close(Session session) {
-        if (session != null) {
-            session.close();
-        }
+
+    public static void shutdown() {
+        // Закрытие кэша и пула соединений
+        getSessionFactory().close();
     }
 }
+
+//    private static final SessionFactory sessionFactory = initSessionFactory();
+//
+//    private static SessionFactory initSessionFactory() {
+//        try {
+//
+//            return new Configuration().configure().buildSessionFactory();
+//        } catch (Throwable ex) {
+//            ex.printStackTrace();
+//            throw new ExceptionInInitializerError("Ошибка подключения " + ex);
+//        }
+//    }
+//    public static Session getSession() throws HibernateException {
+//        return sessionFactory.openSession();
+//    }
+//    public static void close(Session session) {
+//        if (session != null) {
+//            session.close();
+//        }
+//    }
+//}
+
+
+//    private static final String url = "jdbc:postgresql://localhost:5432/excelparser";
+//    private static final String user = "miracle";
+//    private static final String password = "55546123qwerty";
+//
+//    private static SessionFactory sessionFactory = initSessionFactory();
+//
+//    private static SessionFactory initSessionFactory() {
+//        try {
+//            Class.forName("org.postgresql.Driver");
+//            Properties properties = new Properties();
+//            properties.setProperty("hibernate.connection.url", url);
+//            properties.setProperty("hibernate.connection.username", user);
+//            properties.setProperty("hibernate.connection.password", password);
+//            properties.setProperty("hibernate.dialect", "org.hibernate.dialect.SQLServerDialect");
+//            properties.setProperty("hibernate.hbm2ddl.auto", "create");
+//
+//            return new Configuration()
+//                    .addProperties(properties)
+//                    .addAnnotatedClass(User.class)
+//                    .buildSessionFactory();
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//            throw new ExceptionInInitializerError("Нет соединения с БД" + e);
+//        }
+//    }
+//    public static Session getSession() throws HibernateException {
+//        return sessionFactory.openSession();
+//    }
+//    public static void close(Session session) {
+//        if (session != null) {
+//            session.close();
+//        }
+//    }
+//}
 //   ___JDBC___
 //    public static Connection getConnection() throws SQLException {
 //        return DriverManager.getConnection(
@@ -126,7 +175,7 @@ public class Util {
 //            Configuration configuration = new Configuration().configure();
 //            sessionFactory = configuration.buildSessionFactory();
 //        } catch (Throwable e) {
-//            System.err.println("Initial SessionFactory creation failed." + e);
+//            System.err.println("SessionFactory creation failed." + e);
 //            throw new ExceptionInInitializerError(e);
 //        }
 //    }

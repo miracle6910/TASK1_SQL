@@ -6,14 +6,13 @@
     <session-factory>
 
         <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
-        <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/java-postgres</property>
-        <property name="hibernate.connection.username">sa</property>
+        <property name="hibernate.connection.url">jdbc:postgresql://localhost:5438/excelparser</property>
+        <property name="hibernate.connection.username">miracle</property>
         <property name="hibernate.connection.password">55546123qwerty</property>
 
         <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
-
-
-        <property name="hibernate.show_sql">true</property>
         <property name="hibernate.hbm2ddl.auto">update</property>
+        <property name="hibernate.show_sql">true</property>
+        <mapping class="jm.task.core.jdbc.model.User"/>
     </session-factory>
 </hibernate-configuration>

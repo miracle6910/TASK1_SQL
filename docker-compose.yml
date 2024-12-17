@@ -9,5 +9,9 @@ services:
     environment:
       - 'POSTGRES_USER=sa'
       - 'POSTGRES_PASSWORD=55546123qwerty'
-      - 'POSTGRES_HOST_AUTH_METHOD=trust'
       - 'POSTGRES_DB=java'
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+   postgres_data:

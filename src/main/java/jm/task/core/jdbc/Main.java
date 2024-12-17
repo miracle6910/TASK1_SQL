@@ -10,6 +10,7 @@ import java.util.List;
 
 public class Main {
     public static UserService userService = new UserServiceImpl();
+
     public static void main(String[] args) throws SQLException {
 
         userService.createUsersTable();
@@ -34,5 +35,6 @@ public class Main {
 
         userService.dropUsersTable();
         System.out.println("Таблица Users удалена.");
-}
+
+    }
 }
