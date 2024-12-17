@@ -30,11 +30,11 @@ public class Main {
             System.out.println(user);
         }
 
-//        userService.cleanUsersTable();
-//        System.out.println("Таблица Users очищена. Количество Users: " + userService.getAllUsers().size());
-//
-//        userService.dropUsersTable();
-//        System.out.println("Таблица Users удалена.");
+        userService.cleanUsersTable();
+        System.out.println("Таблица Users очищена. Количество Users: " + userService.getAllUsers().size());
+
+        userService.dropUsersTable();
+        System.out.println("Таблица Users удалена.");
 
     }
 }

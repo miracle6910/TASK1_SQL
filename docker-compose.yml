@@ -10,8 +10,6 @@ services:
       - 'POSTGRES_USER=sa'
       - 'POSTGRES_PASSWORD=55546123qwerty'
       - 'POSTGRES_DB=java'
-    volumes:
-      - postgres_data:/var/lib/postgresql/data
 
 volumes:
    postgres_data:
