@@ -28,7 +28,6 @@ public class Util {
     }
 
     public static void shutdown() {
-        // Закрытие кэша и пула соединений
         getSessionFactory().close();
     }
 }

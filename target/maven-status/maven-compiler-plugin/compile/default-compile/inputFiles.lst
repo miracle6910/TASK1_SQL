@@ -1,8 +1,8 @@
-F:\java\PP_1_1_3-4_JDBC_Hibernate\src\main\java\jm\task\core\jdbc\Main.java
-F:\java\PP_1_1_3-4_JDBC_Hibernate\src\main\java\jm\task\core\jdbc\dao\UserDaoHibernateImpl.java
-F:\java\PP_1_1_3-4_JDBC_Hibernate\src\main\java\jm\task\core\jdbc\model\User.java
-F:\java\PP_1_1_3-4_JDBC_Hibernate\src\main\java\jm\task\core\jdbc\dao\UserDao.java
-F:\java\PP_1_1_3-4_JDBC_Hibernate\src\main\java\jm\task\core\jdbc\util\Util.java
-F:\java\PP_1_1_3-4_JDBC_Hibernate\src\main\java\jm\task\core\jdbc\dao\UserDaoJDBCImpl.java
-F:\java\PP_1_1_3-4_JDBC_Hibernate\src\main\java\jm\task\core\jdbc\service\UserServiceImpl.java
-F:\java\PP_1_1_3-4_JDBC_Hibernate\src\main\java\jm\task\core\jdbc\service\UserService.java
+C:\Users\crapt\IdeaProjects\TASK1_SQL\src\main\java\jm\task\core\jdbc\dao\UserDao.java
+C:\Users\crapt\IdeaProjects\TASK1_SQL\src\main\java\jm\task\core\jdbc\Main.java
+C:\Users\crapt\IdeaProjects\TASK1_SQL\src\main\java\jm\task\core\jdbc\dao\UserDaoHibernateImpl.java
+C:\Users\crapt\IdeaProjects\TASK1_SQL\src\main\java\jm\task\core\jdbc\service\UserService.java
+C:\Users\crapt\IdeaProjects\TASK1_SQL\src\main\java\jm\task\core\jdbc\dao\UserDaoJDBCImpl.java
+C:\Users\crapt\IdeaProjects\TASK1_SQL\src\main\java\jm\task\core\jdbc\model\User.java
+C:\Users\crapt\IdeaProjects\TASK1_SQL\src\main\java\jm\task\core\jdbc\service\UserServiceImpl.java
+C:\Users\crapt\IdeaProjects\TASK1_SQL\src\main\java\jm\task\core\jdbc\util\Util.java

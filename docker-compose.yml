@@ -9,7 +9,7 @@ services:
     environment:
       - 'POSTGRES_USER=sa'
       - 'POSTGRES_PASSWORD=55546123qwerty'
-      - 'POSTGRES_DB=java'
+      - 'POSTGRES_DB=postgres'
 
 volumes:
    postgres_data:

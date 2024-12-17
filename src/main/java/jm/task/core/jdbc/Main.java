@@ -25,16 +25,16 @@ public class Main {
 
 
         List<User> users = userService.getAllUsers();
-        System.out.println("Список Users:");
+        System.out.println("TABLE Users:");
         for (User user : users) {
             System.out.println(user);
         }
 
         userService.cleanUsersTable();
-        System.out.println("Таблица Users очищена. Количество Users: " + userService.getAllUsers().size());
+        System.out.println("TABLE Users CLEANED. COUNT Users: " + userService.getAllUsers().size());
 
         userService.dropUsersTable();
-        System.out.println("Таблица Users удалена.");
+        System.out.println("TABLE Users DELETED!.");
 
     }
 }
