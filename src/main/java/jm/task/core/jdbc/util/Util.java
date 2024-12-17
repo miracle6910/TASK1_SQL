@@ -13,15 +13,12 @@ public class Util {
 
     private static SessionFactory buildSessionFactory() {
         try {
-            // Создание конфигурации Hibernate
             Configuration configuration = new Configuration();
-            configuration.configure(); // Загружает hibernate.cfg.xml
+            configuration.configure();
 
-            // Создание SessionFactory из конфигурации
             return configuration.buildSessionFactory();
         } catch (Throwable ex) {
-            // Обработка ошибок при создании SessionFactory
-            System.err.println("Initial SessionFactory creation failed." + ex);
+            System.err.println("Ошибка соединения " + ex);
             throw new ExceptionInInitializerError(ex);
         }
     }

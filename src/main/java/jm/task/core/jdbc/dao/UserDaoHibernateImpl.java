@@ -68,6 +68,7 @@ public class UserDaoHibernateImpl implements UserDao {
             session.delete(user);
             transaction.commit();
         } catch (HibernateException e) {
+            System.out.println("Ошибка при удалении");
             e.printStackTrace();
         }
     }
@@ -78,6 +79,7 @@ public class UserDaoHibernateImpl implements UserDao {
             Query query = session.createQuery("from User");
             userList = query.list();
         } catch (HibernateException e) {
+            System.out.println("Ошибка при получении списка Users");
             e.printStackTrace();
         }
         return userList;
@@ -91,6 +93,7 @@ public class UserDaoHibernateImpl implements UserDao {
             query.executeUpdate();
             transaction.commit();
         } catch (HibernateException e) {
+            System.out.println("Ошибка при удалении пользователей");
             e.printStackTrace();
         }
     }
