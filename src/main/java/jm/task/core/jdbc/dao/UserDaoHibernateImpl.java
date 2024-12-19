@@ -50,9 +50,9 @@ public class UserDaoHibernateImpl implements UserDao {
             Query query = session.createSQLQuery(" DROP TABLE IF EXISTS users");
             query.executeUpdate();
             session.getTransaction().commit();
+            logger.info("Таблица users удалена успешно.");
         } catch (HibernateException e) {
-
-            e.printStackTrace();
+            logger.error("Ошибка при удалении таблицы Users", e);
         }
     }
 
