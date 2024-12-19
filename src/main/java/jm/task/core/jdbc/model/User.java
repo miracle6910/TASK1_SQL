@@ -10,32 +10,23 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column
     private String name;
 
+    @Column
     private String lastName;
 
+    @Column
     private Byte age;
 
+    public User() {
+    }
 
-
-    public User(String name, String lastName, byte age) {
+    public User(String name, String lastName, Byte age) {
         this.name = name;
         this.lastName = lastName;
         this.age = age;
     }
-
-    public User() {
-        
-    }
-
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
-
     public String getName() {
         return name;
     }
@@ -44,29 +35,13 @@ public class User {
         this.name = name;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    public void setAge(Byte age) {
-        this.age = age;
-    }
-
     public String getLastName() {
         return lastName;
     }
 
-    public byte getAge() {
+
+    public Byte getAge() {
         return age;
     }
 
-    @Override
-    public String toString() {
-        return "Пользователь{" +
-                "Номер=" + id +
-                ", Имя='" + name + '\'' +
-                ", Фамилия='" + lastName + '\'' +
-                ", Возраст=" + age +
-                '}';
-    }
 }
